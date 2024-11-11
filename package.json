@@ -1,0 +1,26 @@
+{
+  "name": "ml-server",
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "type": "commonjs",
+  "engines": {
+    "node": "18.16.1"
+  },
+  "scripts": {
+    "start": "node src/app.js",
+    "watch": "nodemon src/app.js",
+    "gcp-build": "npm rebuild @tensorflow/tfjs-node --build-from-source",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@google-cloud/firestore": "^7.10.0",
+    "@hapi/hapi": "^21.3.12",
+    "@tensorflow/tfjs-node": "^3.21.1",
+    "nodemon": "^3.1.7",
+    "uuid": "^11.0.3"
+  }
+}
