@@ -12,14 +12,16 @@ const storePredictions = async (prediction) => {
 
     const { result, suggestion } = prediction;
 
+    const id = uuidv7();
+
     const input = {
-        id: uuidv7(),
+        id,
         result,
         suggestion,
         createdAt: Date.now().toString()
     };
 
-    await collection.add(input);
+    await collection.doc(id).set(input);
 
     return input;
 }
